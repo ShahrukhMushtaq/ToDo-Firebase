@@ -1,0 +1,30 @@
+
+<!-- <ul class="list-group hover">
+    <li class="list-group-item" *ngFor="let curr of todolist">
+      {{curr.name}} - {{curr.todoDetail}}
+    </li>
+  </ul> -->
+  <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>todo-Details</th>
+          <th>Delete</th>
+          <th>Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let curr of todolist">
+          <td>{{curr.name}}</td>
+          <td>{{curr.email}}</td>
+          <td>{{curr.todoDetail}}</td>
+          <td> 
+            <button class="btn btn-danger" (click)="onDelete(curr.$key)">Delete</button>
+          </td>
+          <td> 
+              <button class="btn btn-info" (click)="onUpdate(curr)">Update</button>
+            </td>
+        </tr>
+      </tbody>
+    </table>

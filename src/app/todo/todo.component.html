@@ -1,0 +1,22 @@
+<form class="form-inline" #todoForm="ngForm" (ngSubmit)="onSubmit(todoForm)">
+  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="doService.currList.$key" >
+  <div class="form-group">
+    <label for="name">Name</label> &nbsp;
+    <input type="name" class="form-control" id="name" name="name" #name="ngModel" [(ngModel)]="doService.currList.name">
+    &nbsp;
+  </div>&nbsp;&nbsp;
+  <div class="form-group">
+    <label for="email">Email</label> &nbsp;
+    <input type="email" class="form-control" id="email" name="email" #email="ngModel" [(ngModel)]="doService.currList.email">
+    &nbsp;&nbsp;&nbsp;
+  </div>
+  <div class = "form-group">
+    <label for = "name">ToDo Details</label> &nbsp;
+    <textarea class = "form-control" rows = "2" name="todoDetail" #todoDetail="ngModel" [(ngModel)]="doService.currList.todoDetail"></textarea>
+    &nbsp;
+  </div>
+  &nbsp;&nbsp;
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+<br /> <br /> <br />
+<todo-list></todo-list>
